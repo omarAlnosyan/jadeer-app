@@ -14,23 +14,23 @@ st.set_page_config(page_title="جدير", layout="centered")
 st.markdown("""
     <style>
         .stApp {
-            background: linear-gradient(to bottom, #f3e5f5, #ede7f6);
+            background: linear-gradient(to bottom, #f8e9ff, #fdf5ff);
             font-family: 'Segoe UI', sans-serif;
         }
         .main-title {
             text-align: center;
             font-size: 3rem;
-            color: #4a148c;
+            color: #6a1b9a;
             margin-bottom: 0.2rem;
         }
         .subtitle {
             text-align: center;
-            color: #6a1b9a;
+            color: #8e24aa;
             font-size: 1.1rem;
             margin-bottom: 2rem;
         }
         .stButton > button {
-            background-color: #6a1b9a;
+            background-color: #8e24aa;
             color: white;
             border-radius: 10px;
             padding: 0.5rem 1.5rem;
@@ -38,13 +38,13 @@ st.markdown("""
             border: none;
         }
         .stButton > button:hover {
-            background-color: #4a148c;
+            background-color: #6a1b9a;
         }
     </style>
 """, unsafe_allow_html=True)
 
 st.markdown("""
-<h1 class='main-title'>🟪 جدير</h1>
+<h1 class='main-title'>جدير</h1>
 <p class='subtitle'>عَبِّ البيانات، وخلنا نقول لك إذا الشخص يستاهل القرض أو لا</p>
 """, unsafe_allow_html=True)
 
