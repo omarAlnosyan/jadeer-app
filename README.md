@@ -39,8 +39,7 @@ This app uses the **XGBoost** algorithm, a powerful and efficient classification
 
 Once deployed on Streamlit Cloud, you can access it directly at:
 
-[[[[[Launch the App](https://share.streamlit.io/your-username/jadeer/main/app.py](https://jadeer.streamlit.app/#jdyr))
-](https://jadeer.streamlit.app/#jdyr)](https://jadeer.streamlit.app/#jdyr)](https://jadeer.streamlit.app/#jdyr)
+https://jadeer.streamlit.app/#jdyr
 ---
 
 ## 📁 Repository Contents
