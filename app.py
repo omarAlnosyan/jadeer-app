@@ -4,35 +4,33 @@ import numpy as np
 import pickle
 import xgboost as xgb
 
-# تحميل النموذج ومحول البيانات
 xgb_model = xgb.Booster()
 xgb_model.load_model("xgb_model.json")
 
 with open("dv.pkl", "rb") as f:
     dv = pickle.load(f)
 
-# إعداد الصفحة والتنسيق
 st.set_page_config(page_title="جدير", layout="centered")
 st.markdown("""
     <style>
         .stApp {
-            background: linear-gradient(to bottom, #ede7f6, #ffffff);
+            background: linear-gradient(to bottom, #f3e5f5, #ede7f6);
             font-family: 'Segoe UI', sans-serif;
         }
         .main-title {
             text-align: center;
-            font-size: 2.8rem;
-            color: #6a1b9a;
+            font-size: 3rem;
+            color: #4a148c;
             margin-bottom: 0.2rem;
         }
         .subtitle {
             text-align: center;
-            color: #7b1fa2;
-            font-size: 1rem;
+            color: #6a1b9a;
+            font-size: 1.1rem;
             margin-bottom: 2rem;
         }
         .stButton > button {
-            background-color: #8e24aa;
+            background-color: #6a1b9a;
             color: white;
             border-radius: 10px;
             padding: 0.5rem 1.5rem;
@@ -40,15 +38,16 @@ st.markdown("""
             border: none;
         }
         .stButton > button:hover {
-            background-color: #6a1b9a;
+            background-color: #4a148c;
         }
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown("<h1 class='main-title'> جدير</h1>", unsafe_allow_html=True)
-st.markdown("<p class='subtitle'>عَبِّ البيانات، وخلنا نحكم إذا الشخص يستحق القرض أو لا</p>", unsafe_allow_html=True)
+st.markdown("""
+<h1 class='main-title'>🟪 جدير</h1>
+<p class='subtitle'>عَبِّ البيانات، وخلنا نقول لك إذا الشخص يستاهل القرض أو لا</p>
+""", unsafe_allow_html=True)
 
-# الأعمدة المدخلة
 col1, col2 = st.columns(2)
 
 with col1:
@@ -69,7 +68,6 @@ with col2:
 
 term = st.slider("مدة القرض (بالأشهر)", 6, 72, 36)
 
-# التحقق من الحقول المطلوبة
 required_fields = [home, marital, records, job]
 if "اختر" in required_fields:
     st.warning("يرجى تعبئة جميع الحقول قبل التنبؤ")
